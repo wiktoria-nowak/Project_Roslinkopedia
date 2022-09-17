@@ -1,0 +1,1067 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green-light: rgb(33, 179, 69);
+    --green-dark: rgb(20, 73, 33);
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    text-align: justify;
+    position: relative;
+    width: 100%;
+}
+
+/* menu */
+
+nav {
+    width: 100%;
+    min-height: 50px;
+    position: fixed;
+    top: 0;
+}
+
+.menu-icon {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+}
+
+.fa-bars {
+    margin: 5px 30px;
+    padding: 8px 15px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    color: #fff;
+    transition: color .3s, border .3s;
+}
+
+.fa-bars:hover {
+    color: var(--green-light);
+    border: 2px solid var(--green-light);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -300px;
+    padding: 0;
+    list-style: none;
+    transition: top .5s;
+}
+
+ul.active {
+    top: 50px;
+}
+
+ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-bottom: 2px solid #bbb;
+    background-color: #222;
+    transition: background-color .3s;
+}
+
+ul li:first-child {
+    border-top: 2px solid #bbb;
+}
+
+ul li:hover {
+    background-color: #333;
+}
+
+ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+ul li:hover a {
+    color: var(--green-light);
+}
+
+/* header */
+
+header {
+    margin-top: 50px;
+    height: 40vh;
+    background-image: url(../img/znajdz/bg-znajdz.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.header-info h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.base {
+    margin: 3em 1.2em;
+    font-size: 0.8rem;
+}
+
+.base h2,
+.base h3 {
+    font-weight: bold;
+    text-align: left;
+}
+
+.base h2 {
+    color: var(--green-light);
+    ;
+}
+
+.base h3 {
+    color: var(--green-dark);
+}
+
+input {
+    border: 2px solid var(--green-light);
+    border-radius: 6px;
+    width: 100%;
+    padding: 5px 2px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid rgb(121, 188, 21);
+    background-color: rgb(121, 188, 21, 0.1);
+}
+
+.plants-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.plant-box {
+    width: 120px;
+    margin: 15px 5px;
+    overflow: hidden;
+    background-color: rgba(192, 237, 11, 0.211);
+    border-radius: 6px;
+}
+
+.plant-box p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+    padding: 4px 2px;
+    margin-bottom: 0;
+}
+
+.mini-pic {
+    height: 120px;
+    width: 120px;
+    background-position: center;
+    background-size: cover;
+}
+
+.plant-box .plant-info {
+    display: none;
+}
+
+.plant-box:hover {
+    cursor: pointer;
+}
+
+.pic-1 {
+    background-image: url(../img/znajdz/01-aglaonema.jpg);
+}
+
+.pic-2 {
+    background-image: url(../img/znajdz/02-albuca-spiralis.jpg);
+}
+
+.pic-3 {
+    background-image: url(../img/znajdz/03-aloes.jpg);
+}
+
+.pic-4 {
+    background-image: url(../img/znajdz/04-alokazja.jpg);
+}
+
+.pic-5 {
+    background-image: url(../img/znajdz/05-alternanthera-ficodea.jpg);
+}
+
+.pic-6 {
+    background-image: url(../img/znajdz/06-ananas-champaca.jpg);
+}
+
+.pic-7 {
+    background-image: url(../img/znajdz/07-ananas-mi-amigo.jpg);
+}
+
+.pic-8 {
+    background-image: url(../img/znajdz/08-anthurium.jpg);
+}
+
+.pic-9 {
+    background-image: url(../img/znajdz/09-areka-palma.jpg);
+}
+
+.pic-10 {
+    background-image: url(../img/znajdz/10-aspidistra.jpg);
+}
+
+.pic-11 {
+    background-image: url(../img/znajdz/11-bananowiec.jpg);
+}
+
+.pic-12 {
+    background-image: url(../img/znajdz/12-begonia.jpg);
+}
+
+.pic-13 {
+    background-image: url(../img/znajdz/13-begonia-maculata.jpg);
+}
+
+.pic-14 {
+    background-image: url(../img/znajdz/14-caladium.jpg);
+}
+
+.pic-15 {
+    background-image: url(../img/znajdz/15-calathea.jpg);
+}
+
+.pic-16 {
+    background-image: url(../img/znajdz/16-cereus.jpg);
+}
+
+.pic-17 {
+    background-image: url(../img/znajdz/17-ceropegia.jpg);
+}
+
+.pic-18 {
+    background-image: url(../img/znajdz/18-chamedora.jpg);
+}
+
+.pic-19 {
+    background-image: url(../img/znajdz/19-cissus.jpg);
+}
+
+.pic-20 {
+    background-image: url(../img/znajdz/20-clusia-rosea.jpg);
+}
+
+.pic-21 {
+    background-image: url(../img/znajdz/21-codiaeum.jpg);
+}
+
+.pic-22 {
+    background-image: url(../img/znajdz/22-ctenanthe.jpg);
+}
+
+.pic-23 {
+    background-image: url(../img/znajdz/23-cykas.jpg);
+}
+
+.pic-24 {
+    background-image: url(../img/znajdz/24-daktylowiec.jpg);
+}
+
+.pic-25 {
+    background-image: url(../img/znajdz/25-diffenbachia.jpg);
+}
+
+.pic-26 {
+    background-image: url(../img/znajdz/26-dracena-fragans.jpg);
+}
+
+.pic-27 {
+    background-image: url(../img/znajdz/27-dracena-marginata.jpg);
+}
+
+.pic-28 {
+    background-image: url(../img/znajdz/28-dracena-lemon.jpg);
+}
+
+.pic-29 {
+    background-image: url(../img/znajdz/29-dravieria.jpg);
+}
+
+.pic-30 {
+    background-image: url(../img/znajdz/30-drzewko-cytrusowe.jpg);
+}
+
+.pic-31 {
+    background-image: url(../img/znajdz/31-drzewko-laurowe.jpg);
+}
+
+.pic-32 {
+    background-image: url(../img/znajdz/32-drzewko-oliwne.jpg);
+}
+
+.pic-33 {
+    background-image: url(../img/znajdz/33-echeveria.jpg);
+}
+
+.pic-34 {
+    background-image: url(../img/znajdz/34-epi-golden.jpg);
+}
+
+.pic-35 {
+    background-image: url(../img/znajdz/35-epi-happy.jpg);
+}
+
+.pic-36 {
+    background-image: url(../img/znajdz/36-epi-marble.jpg);
+}
+
+.pic-37 {
+    background-image: url(../img/znajdz/37-epi-njoy.jpg);
+}
+
+.pic-38 {
+    background-image: url(../img/znajdz/38-epi-pinnatum.jpg);
+}
+
+.pic-39 {
+    background-image: url(../img/znajdz/39-epi-zlociste.jpg);
+}
+
+.pic-40 {
+    background-image: url(../img/znajdz/40-eschynantus.jpg);
+}
+
+.pic-41 {
+    background-image: url(../img/znajdz/41-eukaliptus.jpg);
+}
+
+.pic-42 {
+    background-image: url(../img/znajdz/42-fatsia.jpg);
+}
+
+.pic-43 {
+    background-image: url(../img/znajdz/43-ficus.jpg);
+}
+
+.pic-44 {
+    background-image: url(../img/znajdz/44-fitonia.jpg);
+}
+
+.pic-45 {
+    background-image: url(../img/znajdz/45-frizea.jpg);
+}
+
+.pic-46 {
+    background-image: url(../img/znajdz/46-grubosz-gollum.jpg);
+}
+
+.pic-47 {
+    background-image: url(../img/znajdz/47-grubosz-hobbit.jpg);
+}
+
+.pic-48 {
+    background-image: url(../img/znajdz/48-grudnik.jpg);
+}
+
+.pic-49 {
+    background-image: url(../img/znajdz/49-gynura.jpg);
+}
+
+.pic-50 {
+    background-image: url(../img/znajdz/50-haworsja.jpg);
+}
+
+.pic-51 {
+    background-image: url(../img/znajdz/51-homalomena.jpg);
+}
+
+.pic-52 {
+    background-image: url(../img/znajdz/52-hoya.jpg);
+}
+
+.pic-53 {
+    background-image: url(../img/znajdz/53-jasmin.jpg);
+}
+
+.pic-54 {
+    background-image: url(../img/znajdz/54-juka.jpg);
+}
+
+.pic-55 {
+    background-image: url(../img/znajdz/55-juncus.jpg);
+}
+
+.pic-56 {
+    background-image: url(../img/znajdz/56-kaktus-zygzak.jpg);
+}
+
+.pic-57 {
+    background-image: url(../img/znajdz/57-kasztanowiec.jpg);
+}
+
+.pic-58 {
+    background-image: url(../img/znajdz/58-kawa.jpg);
+}
+
+.pic-59 {
+    background-image: url(../img/znajdz/59-kencja.jpg);
+}
+
+.pic-60 {
+    background-image: url(../img/znajdz/60-kliwia.jpg);
+}
+
+.pic-61 {
+    background-image: url(../img/znajdz/61-kordylina.jpg);
+}
+
+.pic-62 {
+    background-image: url(../img/znajdz/62-kroton.jpg);
+}
+
+.pic-63 {
+    background-image: url(../img/znajdz/63-lepismium.jpg);
+}
+
+.pic-64 {
+    background-image: url(../img/znajdz/64-liwistona.jpg);
+}
+
+.pic-65 {
+    background-image: url(../img/znajdz/65-losie-rogi.jpg);
+}
+
+.pic-66 {
+    background-image: url(../img/znajdz/66-maranta.jpg);
+}
+
+.pic-67 {
+    background-image: url(../img/znajdz/67-mimoza.jpg);
+}
+
+.pic-68 {
+    background-image: url(../img/znajdz/68-monstera.jpg);
+}
+
+.pic-69 {
+    background-image: url(../img/znajdz/69-niedośpian.jpg);
+}
+
+.pic-70 {
+    background-image: url(../img/znajdz/70-nolina.jpg);
+}
+
+.pic-71 {
+    background-image: url(../img/znajdz/71-oleander.jpg);
+}
+
+.pic-72 {
+    background-image: url(../img/znajdz/72-oplątwa.jpg);
+}
+
+.pic-73 {
+    background-image: url(../img/znajdz/73-opuncja.jpg);
+}
+
+.pic-74 {
+    background-image: url(../img/znajdz/74-pachira.jpg);
+}
+
+.pic-75 {
+    background-image: url(../img/znajdz/75-papirus-palmiasty.jpg);
+}
+
+.pic-76 {
+    background-image: url(../img/znajdz/76-papirus-koperkowy.jpg);
+}
+
+.pic-77 {
+    background-image: url(../img/znajdz/77-paproc.jpg);
+}
+
+.pic-78 {
+    background-image: url(../img/znajdz/78-patyczak.jpg);
+}
+
+.pic-79 {
+    background-image: url(../img/znajdz/79-peperomia.jpg);
+}
+
+.pic-80 {
+    background-image: url(../img/znajdz/80-pepper.jpg);
+}
+
+.pic-81 {
+    background-image: url(../img/znajdz/81-phil-scandens.jpg);
+}
+
+.pic-82 {
+    background-image: url(../img/znajdz/82-phlebodium.jpg);
+}
+
+.pic-83 {
+    background-image: url(../img/znajdz/83-pieniazek.jpg);
+}
+
+.pic-84 {
+    background-image: url(../img/znajdz/84-poinsecja.jpg);
+}
+
+.pic-85 {
+    background-image: url(../img/znajdz/85-radermachera.jpg);
+}
+
+.pic-86 {
+    background-image: url(../img/znajdz/86-reo.jpg);
+}
+
+.pic-87 {
+    background-image: url(../img/znajdz/87-roza-pustyni.jpg);
+}
+
+.pic-88 {
+    background-image: url(../img/znajdz/88-sansevieria.jpg);
+}
+
+.pic-89 {
+    background-image: url(../img/znajdz/89-szeflera.jpg);
+}
+
+.pic-90 {
+    background-image: url(../img/znajdz/90-scindapus.jpg);
+}
+
+.pic-91 {
+    background-image: url(../img/znajdz/91-sedum.jpg);
+}
+
+.pic-92 {
+    background-image: url(../img/znajdz/92-senecio-everest.jpg);
+}
+
+.pic-93 {
+    background-image: url(../img/znajdz/93-senecio-starzec.jpg);
+}
+
+.pic-94 {
+    background-image: url(../img/znajdz/94-starzec-rowleya.jpg);
+}
+
+.pic-95 {
+    background-image: url(../img/znajdz/95-skrzydlokwiat.jpg);
+}
+
+.pic-96 {
+    background-image: url(../img/znajdz/96-smuzyna.jpg);
+}
+
+.pic-97 {
+    background-image: url(../img/znajdz/97-spattebachia.jpg);
+}
+
+.pic-98 {
+    background-image: url(../img/znajdz/98-stephania-bulwa.jpg);
+}
+
+.pic-99 {
+    background-image: url(../img/znajdz/99-strelicja.jpg);
+}
+
+.pic-100 {
+    background-image: url(../img/znajdz/100-stromanthe.jpg);
+}
+
+.pic-101 {
+    background-image: url(../img/znajdz/101-mikado-trawa.jpg);
+}
+
+.pic-102 {
+    background-image: url(../img/znajdz/102-zroslicha.jpg);
+}
+
+.pic-103 {
+    background-image: url(../img/znajdz/103-szczawik.jpg);
+}
+
+.pic-104 {
+    background-image: url(../img/znajdz/104-szparag.jpg);
+}
+
+.pic-105 {
+    background-image: url(../img/znajdz/105-trzykrotka.jpg);
+}
+
+.pic-106 {
+    background-image: url(../img/znajdz/106-widliczka.jpg);
+}
+
+.pic-107 {
+    background-image: url(../img/znajdz/107-wilczomlecz.jpg);
+}
+
+.pic-108 {
+    background-image: url(../img/znajdz/108-zamiokulkas.jpg);
+}
+
+.pic-109 {
+    background-image: url(../img/znajdz/109-zielistka.jpg);
+}
+
+.pic-110 {
+    background-image: url(../img/znajdz/110-zywe-kamienie.jpg);
+}
+
+.popup-container {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.149)
+}
+
+.popup {
+    display: none;
+    width: 80%;
+    max-height: 60%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 30px 0 rgb(0, 0, 0);
+    z-index: 2;
+    overflow: auto;
+}
+
+.popup .plant-info {
+    display: block;
+}
+
+.popup div {
+    padding: 8px;
+    font-size: 0.7rem;
+    text-align: justify;
+}
+
+.popup div h2 {
+    color: var(--green-light);
+    font-size: 1.3rem;
+    margin-top: 12px;
+}
+
+.popup div h4 {
+    color: var(--green-dark);
+    font-size: 0.8rem;
+}
+
+.popup div h2,
+.popup div h4 {
+    font-weight: bold;
+    text-align: left;
+}
+
+.fa-sun {
+    color: goldenrod;
+}
+
+.fa-droplet {
+    color: lightseagreen;
+}
+
+.fa-signal {
+    color: green;
+}
+
+.popup .close-btn {
+    padding: 10px 17px;
+    position: absolute;
+    right: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: color 0.3s;
+}
+
+.popup .close-btn:hover {
+    color: rgb(188, 38, 38);
+}
+
+footer {
+    height: 10vh;
+    line-height: 10vh;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff;
+    background-color: var(--green-light);
+}
+
+@media (min-width: 533px) {
+    .base {
+        margin: 3em 1.2em;
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 533px) and (orientation: landscape) {
+    header {
+        height: 60vh;
+        background-position: 25% 75%;
+    }
+
+    ul li {
+        height: 40px;
+    }
+}
+
+@media (min-width: 720px) {
+    .base {
+        margin: 3em 2.5em;
+        font-size: 1.3rem;
+    }
+
+    .plant-box {
+        width: 140px;
+    }
+
+    .plant-box p {
+        font-size: 0.9rem;
+        line-height: 1rem;
+    }
+
+    .mini-pic {
+        height: 140px;
+        width: 140px;
+    }
+
+    .popup div {
+        font-size: 0.8rem;
+    }
+
+    .popup div h2 {
+        font-size: 1.4rem;
+    }
+
+    .popup div h4 {
+        font-size: 0.9rem;
+    }
+
+    .popup .close-btn {
+        padding: 10px 19px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 730px) and (orientation: landscape) {
+    .header-info h1 {
+        font-size: 3.2rem;
+    }
+
+    footer {
+        height: 15vh;
+        line-height: 15vh;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 760px) {
+    nav {
+        min-height: 60px;
+    }
+
+    .menu-icon {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .fa-bars {
+        margin: 5px 40px;
+        padding: 12px 25px;
+    }
+
+    ul {
+        top: -400px;
+    }
+
+    ul.active {
+        top: 60px;
+    }
+
+    ul li {
+        height: 60px;
+    }
+
+    ul li a {
+        padding: 8px 50px;
+    }
+
+    header {
+        margin-top: 60px;
+    }
+
+    .header-info h1 {
+        font-size: 4.6rem;
+    }
+
+    .plant-box {
+        width: 140px;
+    }
+
+    .plant-box p {
+        font-size: 0.9rem;
+        line-height: 1rem;
+    }
+
+    .mini-pic {
+        height: 140px;
+        width: 140px;
+    }
+
+    .popup div {
+        font-size: 0.9rem;
+    }
+
+    .popup div h2 {
+        font-size: 1.5rem;
+    }
+
+    .popup div h4 {
+        font-size: 1rem;
+    }
+
+    .popup .close-btn {
+        padding: 10px 19px;
+        font-size: 1.3rem;
+    }
+
+    footer {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 910px) {
+    header {
+        background-image: url(../img/znajdz/bg-znajdz-hq.jpg);
+    }
+
+    .plant-box {
+        width: 150px;
+    }
+
+    .plant-box p {
+        font-size: 1rem;
+        line-height: 1.1rem;
+    }
+
+    .mini-pic {
+        height: 150px;
+        width: 150px;
+    }
+
+    .popup div {
+        font-size: 0.9rem;
+    }
+
+    .popup div h2 {
+        font-size: 1.5rem;
+    }
+
+    .popup div h4 {
+        font-size: 1rem;
+    }
+
+    .popup .close-btn {
+        padding: 10px 19px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav {
+        background-color: #222;
+    }
+
+    nav div {
+        display: none;
+    }
+
+    nav {
+        min-height: 100px;
+    }
+
+    .menu-icon {
+        height: 100px;
+        line-height: 100px;
+    }
+
+    ul {
+        top: -500px;
+    }
+
+    ul.active {
+        top: 100px;
+    }
+
+    ul li a {
+        font-size: 1.5rem;
+    }
+
+    header {
+        margin-top: 100px;
+    }
+
+    .popup {
+        width: 50%;
+        max-height: 60%;
+    }
+}
+
+@media (min-width: 1270px) {
+    .menu-icon {
+        display: none;
+    }
+
+    ul {
+        width: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    ul li {
+        height: 100%;
+        border-bottom: none;
+    }
+
+    ul li:first-of-type {
+        border-top: none;
+    }
+
+    ul li a {
+        padding: 40px 20px;
+    }
+
+    .base {
+        margin: 50px 150px;
+    }
+
+    .plant-box {
+        width: 170px;
+    }
+
+    .plant-box p {
+        font-size: 1.1rem;
+        line-height: 1.2rem;
+    }
+
+    .mini-pic {
+        height: 170px;
+        width: 170px;
+    }
+
+    .popup div {
+        font-size: 1.1rem;
+    }
+
+    .popup div h2 {
+        font-size: 1.7rem;
+    }
+
+    .popup div h4 {
+        font-size: 1.2rem;
+    }
+
+    .popup .close-btn {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    nav {
+        width: 80%;
+    }
+
+    ul {
+        justify-content: center;
+    }
+
+    .header-info h1 {
+        font-size: 6.6rem;
+    }
+
+    .header-info h3 {
+        font-size: 3rem;
+    }
+
+    .plant-box {
+        width: 200px;
+    }
+
+    .plant-box p {
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+    }
+
+    .mini-pic {
+        height: 200px;
+        width: 200px;
+    }
+
+    .popup {
+        width: 30%;
+        max-height: 60%;
+    }
+
+    .popup div {
+        font-size: 1.2rem;
+    }
+
+    .popup div h2 {
+        font-size: 1.8rem;
+    }
+
+    .popup div h4 {
+        font-size: 1.3rem;
+    }
+
+    .popup .close-btn {
+        padding: 30px 30px;
+        font-size: 1.8rem;
+    }
+}

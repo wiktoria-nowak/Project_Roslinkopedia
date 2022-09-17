@@ -1,0 +1,469 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green-light: rgb(33, 179, 69);
+    --green-dark: rgb(20, 73, 33);
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    text-align: justify;
+    position: relative;
+    width: 100%;
+}
+
+/* menu */
+
+nav {
+    width: 100%;
+    min-height: 50px;
+    position: fixed;
+    top: 0;
+}
+
+.menu-icon {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+}
+
+.fa-bars {
+    margin: 5px 30px;
+    padding: 8px 15px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    color: #fff;
+    transition: color .3s, border .3s;
+}
+
+.fa-bars:hover {
+    color: var(--green-light);
+    border: 2px solid var(--green-light);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -300px;
+    padding: 0;
+    list-style: none;
+    transition: top .5s;
+}
+
+ul.active {
+    top: 50px;
+}
+
+ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-bottom: 2px solid #bbb;
+    background-color: #222;
+    transition: background-color .3s;
+}
+
+ul li:first-child {
+    border-top: 2px solid #bbb;
+}
+
+ul li:hover {
+    background-color: #333;
+}
+
+ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+ul li:hover a {
+    color: var(--green-light);
+}
+
+/* header */
+
+header {
+    margin-top: 50px;
+    height: 40vh;
+    background-image: url(../img/articles/plants-watering.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.header-info h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.base {
+    margin: 3em 1.2em;
+    font-size: 0.8rem;
+}
+
+.base h2,
+.base h3,
+.base h4 {
+    font-weight: bold;
+    text-align: left;
+}
+
+.base h2 {
+    color: var(--green-light);
+    ;
+}
+
+.base h3 {
+    color: var(--green-dark);
+}
+
+.image-box {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 15px;
+    background-position: center;
+    background-size: cover;
+}
+
+.image-box-one {
+    background-image: url(../img/pielegnacja/nawozenie.jpg);
+}
+
+.image-box-two {
+    background-image: url(../img/pielegnacja/nawilzacz-2.jpg);
+}
+
+.image-box-three {
+    background-image: url(../img/pielegnacja/zraszanie.jpg);
+}
+
+.image-box-four {
+    background-image: url(../img/pielegnacja/obserwowanie.jpg);
+}
+
+.image-box-five {
+    background-image: url(../img/pielegnacja/ogladanie.jpg);
+}
+
+.image-box-six {
+    background-image: url(../img/pielegnacja/przebarwienia.jpg);
+}
+
+.image-box-seven {
+    background-image: url(../img/pielegnacja/sprawdzanie.jpg);
+}
+
+.image-box-eight {
+    background-image: url(../img/pielegnacja/welnowiec.jpg);
+}
+
+.image-box-nine {
+    background-image: url(../img/pielegnacja/przecieranie.jpg);
+}
+
+.image-box-ten {
+    background-image: url(../img/pielegnacja/liscie.jpg);
+}
+
+.fa-leaf {
+    color: var(--green-light);
+}
+
+.new-point,
+.new-section {
+    clear: both;
+}
+
+footer {
+    height: 10vh;
+    line-height: 10vh;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff;
+    background-color: var(--green-light);
+}
+
+@media (min-width: 533px) {
+    .base {
+        margin: 3em 1.2em;
+        font-size: 0.8rem;
+    }
+
+    .image-box {
+        width: 100%;
+        height: 220px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 533px) and (orientation: landscape) {
+    header {
+        height: 60vh;
+        background-position: 25% 75%;
+    }
+
+    ul li {
+        height: 40px;
+    }
+}
+
+@media (min-width: 720px) {
+    .base {
+        margin: 3em 2.5em;
+        font-size: 1.3rem;
+    }
+
+    .image-box {
+        float: left;
+        width: 45%;
+        height: 250px;
+        margin: 8px 25px 20px 0;
+    }
+
+    .base h4 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 730px) and (orientation: landscape) {
+    .header-info h1 {
+        font-size: 3.2rem;
+    }
+
+    footer {
+        height: 15vh;
+        line-height: 15vh;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 760px) {
+    nav {
+        min-height: 60px;
+    }
+
+    .menu-icon {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .fa-bars {
+        margin: 5px 40px;
+        padding: 12px 25px;
+    }
+
+    ul {
+        top: -400px;
+    }
+
+    ul.active {
+        top: 60px;
+    }
+
+    ul li {
+        height: 60px;
+    }
+
+    ul li a {
+        padding: 8px 50px;
+    }
+
+    header {
+        margin-top: 60px;
+    }
+
+    .header-info h1 {
+        font-size: 4.6rem;
+    }
+
+    footer {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 910px) {
+    header {
+        background-image: url(../img/articles/plants-watering-hq.jpg);
+    }
+
+    .image-box-one {
+        background-image: url(../img/pielegnacja/nawozenie-hq.jpg);
+    }
+
+    .image-box-two {
+        background-image: url(../img/pielegnacja/nawilzacz-2-hq.jpg);
+    }
+
+    .image-box-three {
+        background-image: url(../img/pielegnacja/zraszanie-hq.jpg);
+    }
+
+    .image-box-four {
+        background-image: url(../img/pielegnacja/obserwowanie-hq.jpg);
+    }
+
+    .image-box-five {
+        background-image: url(../img/pielegnacja/ogladanie-hq.jpg);
+    }
+
+    .image-box-six {
+        background-image: url(../img/pielegnacja/przebarwienia-hq.jpg);
+    }
+
+    .image-box-seven {
+        background-image: url(../img/pielegnacja/sprawdzanie-hq.jpg);
+    }
+
+    .image-box-eight {
+        background-image: url(../img/pielegnacja/welnowiec-hq.jpg);
+    }
+
+    .image-box-nine {
+        background-image: url(../img/pielegnacja/przecieranie-hq.jpg);
+    }
+
+    .image-box-ten {
+        background-image: url(../img/pielegnacja/liscie-hq.jpg);
+    }
+}
+
+@media (min-width: 1024px) {
+    nav {
+        background-color: #222;
+    }
+
+    nav div {
+        display: none;
+    }
+
+    nav {
+        min-height: 100px;
+    }
+
+    .menu-icon {
+        height: 100px;
+        line-height: 100px;
+    }
+
+    ul {
+        top: -500px;
+    }
+
+    ul.active {
+        top: 100px;
+    }
+
+    ul li a {
+        font-size: 1.5rem;
+    }
+
+    header {
+        margin-top: 100px;
+    }
+
+    .base h2 {
+        font-size: 3.2rem;
+        padding-top: 30px;
+    }
+
+    .base h3 {
+        font-size: 2.8rem;
+    }
+
+    .base h4 {
+        font-size: 2.5rem;
+    }
+
+    .image-box {
+        height: 400px;
+        margin: 8px 40px 20px 0;
+    }
+}
+
+@media (min-width: 1270px) {
+    .menu-icon {
+        display: none;
+    }
+
+    ul {
+        width: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    ul li {
+        height: 100%;
+        border-bottom: none;
+    }
+
+    ul li:first-of-type {
+        border-top: none;
+    }
+
+    ul li a {
+        padding: 40px 20px;
+    }
+
+    .base {
+        margin: 50px 150px;
+    }
+
+    .image-box {
+        height: 370px;
+        margin: 8px 65px 40px 0;
+    }
+
+    footer {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    nav {
+        width: 80%;
+    }
+
+    ul {
+        justify-content: center;
+    }
+
+    .header-info h1 {
+        font-size: 6.6rem;
+    }
+
+    .header-info h3 {
+        font-size: 3rem;
+    }
+}

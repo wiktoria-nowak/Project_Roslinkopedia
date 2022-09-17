@@ -1,0 +1,824 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green-light: rgb(33, 179, 69);
+    --green-dark: rgb(20, 73, 33);
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    width: 100%;
+}
+
+.hero-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+/* menu */
+
+nav {
+    width: 100%;
+    min-height: 50px;
+    position: fixed;
+    top: 0;
+}
+
+.menu-icon {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+}
+
+.fa-bars {
+    margin: 5px 30px;
+    padding: 8px 15px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    color: #fff;
+    transition: color .3s, border .3s;
+}
+
+.fa-bars:hover {
+    color: var(--green-light);
+    border: 2px solid var(--green-light);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -300px;
+    padding: 0;
+    list-style: none;
+    transition: top .5s;
+}
+
+ul.active {
+    top: 50px;
+}
+
+ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-bottom: 2px solid #bbb;
+    background-color: #222;
+    transition: background-color .3s;
+}
+
+ul li:first-child {
+    border-top: 2px solid #bbb;
+}
+
+ul li:hover {
+    background-color: #333;
+}
+
+ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+ul li:hover a {
+    color: var(--green-light);
+}
+
+/* header */
+
+header {
+    margin-top: 50px;
+    height: 50vh;
+    background-image: url(../img/header/plants-desk.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.header-info h1 {
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+
+/* o nas  */
+
+.aboutus,
+.contact-info {
+    margin: 3em 1.2em;
+    text-align: justify;
+    font-size: 0.8rem;
+}
+
+/* artykuły */
+
+.articles {
+    background-color: #eee;
+    margin: 10px;
+    padding: 20px;
+}
+
+.article {
+    margin-bottom: 20px;
+}
+
+.article:last-of-type {
+    margin-bottom: 0;
+}
+
+.article-img {
+    width: 100%;
+    height: 160px;
+    background-position: center;
+    background-size: cover;
+}
+
+.article-img-one {
+    background-image: url(../img/articles/plants-jungle.jpg);
+}
+
+.article-img-two {
+    background-image: url(../img/articles/plants-substrats.jpg);
+}
+
+.article-img-three {
+    background-image: url(../img/articles/plants-watering.jpg);
+}
+
+.article-info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-info h3 {
+    color: var(--green-light);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.article-info p {
+    font-size: 0.95rem;
+    text-align: justify;
+}
+
+.btn-article,
+.send-btn {
+    width: 50%;
+    padding: 5px 10px;
+    background-color: #eee;
+    border: 2px solid #bbb;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: background-color .3s, color .3s;
+}
+
+.btn-article a {
+    color: var(--green-dark);
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.btn-article:hover a {
+    color: #fff;
+}
+
+.btn-article:hover,
+.send-btn:hover {
+    background-color: var(--green-dark);
+    color: #fff;
+}
+
+/* slider */
+
+.more {
+    margin: 20px 0;
+}
+
+.carousel-item {
+    position: relative;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.carousel-img-one {
+    background-image: url(../img/slider/plants-lady.jpg);
+}
+
+.carousel-img-two {
+    background-image: url(../img/slider/plants-five.jpg);
+}
+
+.carousel-img-three {
+    background-image: url(../img/slider/plants-pots-2.jpg);
+}
+
+/* kontakt */
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.contact-box h3 {
+    font-size: 1.4rem;
+}
+
+.address,
+.formular {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #eee;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.address h3,
+.address h4,
+.formular h3,
+.formular label {
+    color: var(--green-dark);
+}
+
+.address h3,
+.formular h3 {
+    font-weight: bold;
+}
+
+.address h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.formular label,
+.formular input,
+.formular textarea {
+    width: 80%;
+}
+
+.formular input,
+.formular textarea {
+    border: 1px solid var(--green-light);
+}
+
+.form-box.error input,
+.form-box.error textarea {
+    border: 1px solid red;
+}
+
+.form-box .error-text {
+    color: red;
+    visibility: hidden;
+    font-size: 0.7rem;
+}
+
+.form-box.error .error-text {
+    visibility: visible;
+}
+
+/* stopka */
+
+footer {
+    height: 10vh;
+    line-height: 10vh;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff;
+    background-color: var(--green-light);
+}
+
+@media (min-width: 533px) and (orientation: landscape) {
+    header {
+        height: 60vh;
+        background-position: 25% 75%;
+    }
+
+    ul li {
+        height: 40px;
+    }
+
+    .formular label,
+    .formular input,
+    .formular select,
+    .formular textarea {
+        width: 80%;
+    }
+
+    .article {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .article-info {
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 14px;
+        margin-top: 0;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .article-info h3 {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .article-info p {
+        font-size: 0.8rem;
+    }
+
+    .btn-article {
+        align-self: center;
+    }
+
+    .contact-box {
+        margin: 10px 30px;
+    }
+}
+
+@media (min-width: 640px) and (orientation: landscape) {
+    .contact-box {
+        margin: 20px 40px;
+    }
+
+    .formular label {
+        margin-bottom: 5px;
+    }
+}
+
+@media (min-width: 730px) and (orientation: landscape) {
+    .header-info h1 {
+        font-size: 3.4rem;
+    }
+
+    .aboutus,
+    .contact-info {
+        margin: 3em 2.2em;
+        font-size: 1rem;
+    }
+
+    .articles {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .article {
+        margin-bottom: 40px;
+    }
+
+    .article:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .article-img {
+        height: 180px;
+    }
+
+    .article-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .article-info p {
+        font-size: 1.1rem;
+    }
+
+    .btn-article,
+    .send-btn {
+        width: 50%;
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .carousel-item {
+        height: 280px;
+    }
+
+    .contact-box {
+        margin: 20px;
+    }
+
+    .contact-box h3 {
+        font-size: 1.7rem;
+    }
+
+    .address,
+    .formular {
+        padding: 20px;
+        margin: 0 60px 10px;
+    }
+
+    .address h4 {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    .formular label,
+    .formular input,
+    .formular select,
+    .formular textarea {
+        width: 65%;
+
+    }
+
+    .formular input,
+    .formular select,
+    .formular textarea {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        height: 15vh;
+        line-height: 15vh;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 760px) {
+    nav {
+        min-height: 60px;
+    }
+
+    .menu-icon {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .fa-bars {
+        margin: 5px 40px;
+        padding: 12px 25px;
+    }
+
+    ul {
+        top: -400px;
+    }
+
+    ul.active {
+        top: 60px;
+    }
+
+    ul li {
+        height: 60px;
+    }
+
+    ul li a {
+        padding: 8px 50px;
+    }
+
+    header {
+        margin-top: 60px;
+    }
+
+    .header-info h1 {
+        font-size: 4.6rem;
+    }
+
+    .aboutus,
+    .contact-info {
+        margin: 3em 3em;
+        font-size: 1.1rem;
+    }
+
+    .articles {
+        background-color: #eee;
+        margin: 10px 50px;
+        padding: 40px;
+    }
+
+    .article {
+        margin-bottom: 40px;
+    }
+
+    .article:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .article-img {
+        height: 300px;
+    }
+
+    .article-info {
+        margin-top: 30px;
+    }
+
+    .article-info h3 {
+        font-size: 1.9rem;
+    }
+
+    .article-info p {
+        font-size: 1.2rem;
+    }
+
+    .btn-article,
+    .send-btn {
+        width: 40%;
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+
+    .more {
+        margin: 60px 0;
+    }
+
+    .carousel-item {
+        height: 550px;
+    }
+
+    .contact-box {
+        margin: 10px 80px;
+    }
+
+    .contact-box h3 {
+        font-size: 2rem;
+    }
+
+    .address,
+    .formular {
+        padding: 30px;
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+    }
+
+    .address h4 {
+        font-size: 1.4rem;
+    }
+
+    .formular input,
+    .formular select,
+    .formular textarea {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 910px) {
+    header {
+        background-image: url(../img/header/plants-desk-hq.jpg);
+    }
+
+    .article-img {
+        height: 250px;
+    }
+
+    .article-info {
+        padding: 25px 0;
+    }
+
+    .carousel-img-one {
+        background-image: url(../img/slider/plants-lady-hq.jpg);
+    }
+
+    .carousel-img-two {
+        background-image: url(../img/slider/plants-five-hq.jpg);
+    }
+
+    .carousel-img-three {
+        background-image: url(../img/slider/plants-pots-2-hq.jpg);
+    }
+
+    .formular input,
+    .formular textarea {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav {
+        background-color: #222;
+    }
+
+    nav div {
+        display: none;
+    }
+
+    nav {
+        min-height: 100px;
+    }
+
+    .menu-icon {
+        height: 100px;
+        line-height: 100px;
+    }
+
+    ul {
+        top: -500px;
+    }
+
+    ul.active {
+        top: 100px;
+    }
+
+    ul li a {
+        font-size: 1.5rem;
+    }
+
+    header {
+        margin-top: 100px;
+    }
+
+    .article-img-one {
+        background-image: url(../img/articles/plants-jungle-hq.jpg);
+    }
+
+    .article-img-two {
+        background-image: url(../img/articles/plants-substrats-hq.jpg);
+    }
+
+    .article-img-three {
+        background-image: url(../img/articles/plants-watering-hq.jpg);
+    }
+
+    .article-info {
+        padding-left: 20px;
+    }
+}
+
+@media (min-width: 1270px) {
+    .menu-icon {
+        display: none;
+    }
+
+    ul {
+        width: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    ul li {
+        height: 100%;
+        border-bottom: none;
+    }
+
+    ul li:first-of-type {
+        border-top: none;
+    }
+
+    ul li a {
+        padding: 40px 20px;
+    }
+
+    .article-img {
+        height: 380px;
+    }
+
+    .btn-article,
+    .send-btn {
+        padding: 18px 35px;
+        font-size: 1.4rem;
+    }
+
+    .contact-box {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .contact-box {
+        margin: 10px 50px;
+    }
+
+    .contact-box h3 {
+        font-size: 2.2rem;
+    }
+
+    .address {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .address,
+    .formular {
+        margin: 20px 0 30px 0;
+        font-size: 1.5rem;
+    }
+
+    .formular {
+        margin-left: 30px;
+    }
+
+    .address h4 {
+        font-size: 1.7rem;
+    }
+
+    .formular input,
+    .formular select,
+    .formular textarea {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    nav {
+        width: 80%;
+    }
+
+    ul {
+        justify-content: center;
+    }
+
+    .header-info h1 {
+        font-size: 6.6rem;
+    }
+
+    .header-info h3 {
+        font-size: 3rem;
+    }
+
+    .aboutus,
+    .contact-info {
+        font-size: 1.5rem;
+    }
+
+    .articles {
+        padding: 60px;
+    }
+
+    .article {
+        margin-bottom: 60px;
+    }
+
+    .article:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .article-img {
+        height: 400px;
+    }
+
+    .article-info h3 {
+        font-size: 2.6rem;
+    }
+
+    .article-info p {
+        font-size: 1.7rem;
+    }
+
+    .btn-article,
+    .send-btn {
+        width: 50%;
+        padding: 25px 40px;
+        font-size: 1.5rem;
+    }
+
+    .more {
+        margin: 70px 0;
+    }
+
+    .carousel-item {
+        height: 700px;
+    }
+
+    .address,
+    .formular {
+        padding: 30px;
+        margin-bottom: 30px;
+        font-size: 1.6rem;
+    }
+}
